@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      F.O.D.M And P
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+    [(ngModel)]="search_string"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">A</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['A']">
+      <ion-icon [color]="aliment.code" name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">B</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['B']">
+      <ion-icon [color]="aliment.code" name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">C</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['C']">
+      <ion-icon [color]="aliment.code" name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+    </ion-item>
+  </ion-item-group>
+  
+</ion-content>
