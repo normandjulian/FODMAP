@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, AlertController } from 'ionic-angular';
 
-import {HomeService} from './home.service';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'page-home',
@@ -13,7 +13,7 @@ export class HomePage {
   public initial_list: any;
 
   public search_string: string = '';
-  constructor(public navCtrl: NavController, public homeService: HomeService) {
+  constructor(public navCtrl: NavController, public homeService: HomeService, public alertCtrl: AlertController) {
 
   }
 
@@ -29,13 +29,16 @@ export class HomePage {
     }
   }
 
+  show_description(description) {
+    let alert = this.alertCtrl.create({
+      subTitle: description,
+      buttons: ['Ok']
+    });
+    alert.present();
+  }
+
   ionViewDidLoad() {
     this.list = this.homeService.get_list();
     this.initial_list = this.homeService.get_list();
   }
-
-  switchTabs() {
-    this.navCtrl.parent.select(1);
-  }
-
 }

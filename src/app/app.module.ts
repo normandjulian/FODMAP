@@ -8,12 +8,22 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FruitPage } from '../pages/fruit/fruit';
 import { TabsPage } from '../pages/tabs/tabs';
+import { MenuPage } from '../pages/menu/menu';
+import { VegetablePage } from '../pages/vegetable/vegetable';
+import { LeguminousPage } from '../pages/leguminous/leguminous';
+import { FeculentPage } from '../pages/feculent/feculent';
+import { MilkyPage } from '../pages/milky/milky';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     TabsPage,
+    MenuPage,
+    VegetablePage,
+    LeguminousPage,
+    FeculentPage,
+    MilkyPage,
     FruitPage
   ],
   imports: [
@@ -25,6 +35,11 @@ import { TabsPage } from '../pages/tabs/tabs';
     MyApp,
     HomePage,
     TabsPage,
+    MenuPage,
+    VegetablePage,
+    LeguminousPage,
+    FeculentPage,
+    MilkyPage,
     FruitPage
   ],
   providers: [

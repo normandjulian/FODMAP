@@ -1,5 +1,6 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
     <ion-title>
       Fruits
     </ion-title>
@@ -16,24 +17,225 @@
   <ion-item-group *ngIf="list">
     <ion-item-divider color="light">A</ion-item-divider>
     <ion-item *ngFor="let aliment of list['A']">
-      <ion-icon [color]="aliment.code" name="radio-button-on"></ion-icon>
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
       <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
     </ion-item>
   </ion-item-group>
 
   <ion-item-group *ngIf="list">
     <ion-item-divider color="light">B</ion-item-divider>
     <ion-item *ngFor="let aliment of list['B']">
-      <ion-icon [color]="aliment.code" name="radio-button-on"></ion-icon>
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
       <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
     </ion-item>
   </ion-item-group>
 
   <ion-item-group *ngIf="list">
     <ion-item-divider color="light">C</ion-item-divider>
     <ion-item *ngFor="let aliment of list['C']">
-      <ion-icon [color]="aliment.code" name="radio-button-on"></ion-icon>
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
       <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">D</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['D']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">E</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['E']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">F</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['F']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">G</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['G']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">H</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['H']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">I</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['I']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">J</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['J']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">K</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['K']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">L</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['L']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">M</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['M']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">O</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['O']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">P</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['P']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">Q</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['Q']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">R</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['R']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">S</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['S']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">T</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['T']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">U</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['U']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">V</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['V']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">W</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['W']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">X</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['X']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">Y</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['Y']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="list">
+    <ion-item-divider color="light">Z</ion-item-divider>
+    <ion-item *ngFor="let aliment of list['Z']">
+      <ion-icon [color]="aliment.code" item-left name="radio-button-on"></ion-icon>
+      <span [style.color]="aliment.code">{{aliment.name}}</span>
+      <ion-icon *ngIf="aliment.description" name="information-circle" item-right (click)="show_description(aliment.description)"></ion-icon>
     </ion-item>
   </ion-item-group>
 
