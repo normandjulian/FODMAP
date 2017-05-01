@@ -1,24 +1,25 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 
-import { HomeService } from './home.service';
+import { Dictionnary } from '../../providers/dictionnary';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html',
-  providers: [HomeService]
+  templateUrl: 'home.html'
 })
 export class HomePage {
   public list: any;
   public initial_list: any;
-
   public search_string: string = '';
-  constructor(public navCtrl: NavController, public homeService: HomeService, public alertCtrl: AlertController) {
+  public title: string = 'F.O.D.M And P';
 
-  }
+  constructor(
+    public navCtrl: NavController,
+    public alertCtrl: AlertController,
+    public dictionnary: Dictionnary) {}
 
   onInput(param) {
-    this.list = this.homeService.get_empty_list();
+    this.list = this.dictionnary.get_empty_list();
 
     for (let alpha in this.initial_list) {
       for (let aliment of this.initial_list[alpha]) {
@@ -38,7 +39,7 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    this.list = this.homeService.get_list();
-    this.initial_list = this.homeService.get_list();
+    this.list = this.dictionnary.get_list();
+    this.initial_list = this.dictionnary.get_list();
   }
 }

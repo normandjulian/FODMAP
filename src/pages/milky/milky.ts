@@ -4,17 +4,17 @@ import { NavController, NavParams } from 'ionic-angular';
 import {HomeService} from '../home/home.service';
 
 /**
-* Generated class for the Fruit page.
-*
-* See http://ionicframework.com/docs/components/#navigation for more info
-* on Ionic pages and navigation.
-*/
+ * Generated class for the Milky page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
 @Component({
-  selector: 'page-fruit',
+  selector: 'page-milky',
   templateUrl: '../home/home.html',
   providers: [HomeService]
 })
-export class FruitPage {
+export class MilkyPage {
   public list: any;
   public initial_list: any;
   public search_string: string = '';
@@ -23,7 +23,8 @@ export class FruitPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public homeService: HomeService) {}
+    public homeService: HomeService) {
+  }
 
   onInput(param) {
     this.list = this.homeService.get_empty_list();
@@ -38,7 +39,7 @@ export class FruitPage {
   }
 
   ionViewDidLoad() {
-    this.list = this.homeService.get_fruits();
-    this.initial_list = this.homeService.get_fruits();
+    this.list = this.homeService.get_milky();
+    this.initial_list = this.homeService.get_milky();
   }
 }

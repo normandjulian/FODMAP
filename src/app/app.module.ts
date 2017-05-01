@@ -7,23 +7,23 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FruitPage } from '../pages/fruit/fruit';
-import { TabsPage } from '../pages/tabs/tabs';
-import { MenuPage } from '../pages/menu/menu';
 import { VegetablePage } from '../pages/vegetable/vegetable';
 import { LeguminousPage } from '../pages/leguminous/leguminous';
 import { FeculentPage } from '../pages/feculent/feculent';
 import { MilkyPage } from '../pages/milky/milky';
+import { AboutPage } from '../pages/about/about';
+
+import { Dictionnary } from '../providers/dictionnary';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    TabsPage,
-    MenuPage,
     VegetablePage,
     LeguminousPage,
     FeculentPage,
     MilkyPage,
+    AboutPage,
     FruitPage
   ],
   imports: [
@@ -34,16 +34,16 @@ import { MilkyPage } from '../pages/milky/milky';
   entryComponents: [
     MyApp,
     HomePage,
-    TabsPage,
-    MenuPage,
     VegetablePage,
     LeguminousPage,
     FeculentPage,
     MilkyPage,
+    AboutPage,
     FruitPage
   ],
   providers: [
     StatusBar,
+    Dictionnary,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

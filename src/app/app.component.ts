@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -10,6 +10,7 @@ import { VegetablePage } from '../pages/vegetable/vegetable';
 import { LeguminousPage } from '../pages/leguminous/leguminous';
 import { FeculentPage } from '../pages/feculent/feculent';
 import { MilkyPage } from '../pages/milky/milky';
+import { AboutPage } from '../pages/about/about';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,9 +18,14 @@ import { MilkyPage } from '../pages/milky/milky';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage:any = HomePage;
+  public hide: boolean = true;
   public pages: Array<{title: string, component: any}>;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(
+    platform: Platform,
+    statusBar: StatusBar,
+    splashScreen: SplashScreen,
+    public menuCtrl: MenuController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -33,7 +39,8 @@ export class MyApp {
       { title: 'Légumes', component: VegetablePage },
       { title: 'Légumineux', component: LeguminousPage },
       { title: 'Féculents', component: FeculentPage },
-      { title: 'Produits laitiers', component: MilkyPage }
+      { title: 'Produits laitiers', component: MilkyPage },
+      { title: 'A propos', component: AboutPage }
     ];
   }
 

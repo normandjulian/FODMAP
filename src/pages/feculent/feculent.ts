@@ -1,29 +1,29 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
 import {HomeService} from '../home/home.service';
 
 /**
-* Generated class for the Fruit page.
+* Generated class for the Feculent page.
 *
 * See http://ionicframework.com/docs/components/#navigation for more info
 * on Ionic pages and navigation.
 */
 @Component({
-  selector: 'page-fruit',
+  selector: 'page-feculent',
   templateUrl: '../home/home.html',
   providers: [HomeService]
 })
-export class FruitPage {
+export class FeculentPage {
   public list: any;
   public initial_list: any;
   public search_string: string = '';
-  public title: string = 'Fruits';
+  public title: string = 'Féculents';
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public homeService: HomeService) {}
+    public homeService: HomeService) {
+  }
 
   onInput(param) {
     this.list = this.homeService.get_empty_list();
@@ -38,7 +38,7 @@ export class FruitPage {
   }
 
   ionViewDidLoad() {
-    this.list = this.homeService.get_fruits();
-    this.initial_list = this.homeService.get_fruits();
+    this.list = this.homeService.get_feculents();
+    this.initial_list = this.homeService.get_feculents();
   }
 }
